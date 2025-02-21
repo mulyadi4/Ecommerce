@@ -2,23 +2,33 @@ import banner from "../assets/banner-image.png";
 
 const Hero = () => {
   return (
-    <section className=" xs:flex-row-reverse items-center justify-between relative top-20 xs:top-60 bg-gray-500 p-6 rounded-lg">
-      {/* Gambar di kanan */}
-      <div className="flex flex-col">
+    <section className="flex items-center justify-between relative  bg-gray-200 py-8 top-10">
+      <div className="container mx-auto flex flex-col md:flex-row items-center">
+        {/* Gambar di kiri */}
+        <div className="md:w-1/2 mb-4 ">
+          <img
+            src={banner}
+            alt="Banner"
+            className="w-full h-auto object-cover "
+          />
+        </div>
 
-      <div className="max-w-96">
-        <img className="max-h-96 max-w-96 rounded-lg shadow-lg" src={banner} alt="Banner" />
-      </div>
-      
-      {/* Teks di kiri */}
-      <div className="text-white text-2xl font-bold xs:w-1/2">
-        <h1>Welcome to Our Website</h1>
-        <p className="text-lg font-light mt-2">
-          Discover amazing content and learn new things every day.
-        </p>
-      </div>
+        {/* Tulisan di kanan */}
+        <div className="md:w-1/2 px-4 md:px-8">
+          <h2 className="text-2xl font-bold mb-2">
+            Judul Banner
+          </h2>
+          <p className="mb-4 text-gray-700">
+            Ini adalah deskripsi singkat untuk banner. Anda dapat menyesuaikan teks ini sesuai kebutuhan.
+          </p>
+          <button className="px-4 py-2 bg-gradient-to-r from-gray-700 to-bg-white  text-white rounded-full hover:bg-gray-600">
+            Lihat Selengkapnya
+          </button>
+        </div>
       </div>
     </section>
+
+  
   );
 };
 
