@@ -1,14 +1,18 @@
 import React from 'react'
-
+import { CgSmartphone } from "react-icons/cg";
+import { IoWatchOutline } from "react-icons/io5";
+import { BsLaptop } from "react-icons/bs";
+import { CiCamera } from "react-icons/ci";
+import { GiConsoleController } from "react-icons/gi";
 const Category = () => {
   // Data kategori (silakan ubah sesuai kebutuhan)
   const categories = [
-    { name: 'iPhone', img: 'https://via.placeholder.com/100' },
-    { name: 'iPad', img: 'https://via.placeholder.com/100' },
-    { name: 'Mac',     img: 'https://via.placeholder.com/100' },
-    { name: 'Watch', img: 'https://via.placeholder.com/100' },
-    { name: 'AirPods', img: 'https://via.placeholder.com/100' },
-    { name: 'TV', img: 'https://via.placeholder.com/100' },
+    { name: 'Smart Phone', img: <CgSmartphone /> },
+    { name: 'Laptop', img: <BsLaptop /> },
+    { name: 'Camera', img: <CiCamera />},
+    { name: 'Console', img: <GiConsoleController /> },
+    { name: 'Other electronics', img: <IoWatchOutline />},
+ 
   ]
 
   return (
@@ -25,7 +29,7 @@ const Category = () => {
           className="bg-white p-4 rounded shadow text-center"
           >
          
-            <p className="text-gray-700 font-semibold">{cat.name}</p>
+            <p className="">{cat.img}</p>
           </div>
         ))}
         </div>

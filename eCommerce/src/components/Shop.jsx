@@ -1,9 +1,7 @@
-
 import Products from './Products'
-import data from './data.json' // Mengimpor data dari file JSON
+import data from '../assets/products.json' 
 
 const Shop = () => {
-  // Mengambil daftar produk dari data.json
   const productList = data.products
 
   return (
