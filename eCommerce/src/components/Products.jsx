@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react';
+import { CartContext } from '../context/CartContext';
 
 const Products = ({ items }) => {
   
-  const [visibleProducts, setVisibleProducts] = useState(6)
+  const [visibleProducts, setVisibleProducts] = useState(8)
+  const { addToCart } = useContext(CartContext);
   const sortedProducts = [...items].sort((a, b) => {
     if (a.popular !== b.popular) return b.popular - a.popular
     return b.rating.rate - a.rating.rate
@@ -10,7 +12,7 @@ const Products = ({ items }) => {
 
   return (
     <div className="p-4">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {sortedProducts.slice(0, visibleProducts).map((product) => {
           const discountedPrice = product.discount 
             ? product.price * (1 - product.discount/100)
@@ -51,10 +53,10 @@ const Products = ({ items }) => {
                   {product.discount ? (
                     <>
                       <span className="text-lg font-bold text-red-600">
-                        Rp {discountedPrice.toLocaleString()}
+                        $ {discountedPrice.toLocaleString()}
                       </span>
                       <span className="text-sm text-gray-500 line-through">
-                        Rp {product.price.toLocaleString()}
+                        $ {product.price.toLocaleString()}
                       </span>
                       <span className="text-sm bg-red-100 text-red-600 px-2 py-1 rounded">
                         -{product.discount}%
@@ -62,13 +64,16 @@ const Products = ({ items }) => {
                     </>
                   ) : (
                     <span className="text-lg font-bold">
-                      Rp {product.price.toLocaleString()}
+                      $ {product.price.toLocaleString()}
                     </span>
                   )}
                 </div>
 
-                <button className="w-full py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors">
-                  Beli Sekarang
+                <button 
+                  onClick={() => addToCart(product)}
+                  className="w-full py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors"
+                >
+                  Tambah ke Keranjang
                 </button>
 
                 {product.popular && (

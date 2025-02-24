@@ -16,13 +16,13 @@ const Category = () => {
   ]
 
   return (
-    <section className="py-20 px-5 ">
+    <section className="py-20 px-4 ">
       <div className='container mx-auto  items-center'>
 
       <h3 className="text-xl font-bold mb-4">Kategori Pilihan</h3>
       
       {/* Grid untuk menampilkan kategori */}
-      <div className="grid grid-cols-3 md:grid-cols-6 gap-4  rounded-lg">
+      <div className="grid grid-cols-3 md:grid-cols-6 gap-4 px-4  rounded-lg">
         {categories.map((cat, index) => (
           <div 
           key={index}

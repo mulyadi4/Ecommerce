@@ -55,8 +55,8 @@ const Hero = () => {
               </div>
               <div className="md:w-1/2 px-4 md:px-8">
                 <h2 className="text-2xl font-bold mb-2">{banner.title}</h2>
-                <p className="mb-4 text-gray-700">{banner.description}</p>
-                <button className="px-4 py-2 bg-gradient-to-r from-gray-700 to-bg-white rounded-full hover:bg-gray-500">
+                <p className="  mb-4 text-gray-700">{banner.description}</p>
+                <button className="px-5 py-3   mb-4 bg-gradient-to-r from-gray-700 to-bg-white rounded-full hover:bg-gray-500">
                   <a className="text-white" href={banner.link}>
                     Lihat Selengkapnya
                   </a>
