@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { CartContext } from '../context/CartContext';
-
+import { FaPlus, FaStar } from 'react-icons/fa';
+import { MdOutlineShoppingCart } from "react-icons/md";
 const Products = ({ items }) => {
   
   const [visibleProducts, setVisibleProducts] = useState(8)
@@ -19,12 +20,22 @@ const Products = ({ items }) => {
             : product.price
 
           return (
-            <div key={product.id} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+            
+            <div key={product.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-lg transition-shadow">
+         
+
+              
               <img 
                 src={product.image} 
                 alt={product.title} 
                 className="w-full h-48 object-contain p-4"
-              />
+                
+                />
+        <div className="group flex flex-row gap-2 text-white p-1 rounded-full ring-1 ring-slate-900/5 cursor-pointer">
+  <FaPlus  onClick={() => addToCart(product)} className="bg-gray-600 text-white h-7 w-7 p-1.5 rounded-full cursor-pointer" />
+  <MdOutlineShoppingCart className="hidden group-hover:flex duration-300 bg-gray-600 text-white h-7 w-7 p-1 rounded-full cursor-pointer" />
+</div>
+
               <div className="p-4">
                 <div className="mb-2">
                   <span className="text-sm text-gray-500">{product.brand}</span>
@@ -69,13 +80,7 @@ const Products = ({ items }) => {
                   )}
                 </div>
 
-                <button 
-                  onClick={() => addToCart(product)}
-                  className="w-full py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors"
-                >
-                  Tambah ke Keranjang
-                </button>
-
+           
                 {product.popular && (
                   <div className="mt-2 text-sm bg-yellow-100 text-yellow-800 px-2 py-1 rounded inline-block">
                     ⭐ Produk Terlaris
