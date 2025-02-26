@@ -19,7 +19,7 @@ const Category = ({ onSelectCategory }) => {
   ];
 
   return (
-    <section id='category' className="py-20 px-4">
+    <section id='category' className="pt-20 px-4">
       <div className="container mx-auto">
         <h3 className="text-xl font-bold mb-4">Category</h3>
         <div className="grid grid-cols-3 gap-6 md:grid-cols-6 px-5 lg:grid-cols-7 rounded-lg">
