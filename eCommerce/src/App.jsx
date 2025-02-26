@@ -1,16 +1,19 @@
-import './App.css'
-import Home from './Page/Home'
-import Header from "./components/Header"
-import { BrowserRouter,Routes,Route } from "react-router-dom"
+import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Home from './Pages/Home';
+import ProductDetail from './Pages/ProductDetail';
+
 function App() {
   return (
-    <>
-      <BrowserRouter>
+    <BrowserRouter>
       <Header />
-      <Home />
-      </BrowserRouter>
-    </>
-  )
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/product/:id" element={<ProductDetail />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

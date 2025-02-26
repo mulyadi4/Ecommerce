@@ -20,7 +20,7 @@ const CartDropdown = () => {
       {/* Total Harga */}
       <div className="flex justify-between border-t pt-2 mt-2">
         <span className="uppercase font-semibold">Total:</span>
-        <span className="font-bold">Rp {total.toLocaleString()}</span>
+        <span className="font-bold">Rp. {total.toLocaleString()}</span>
       </div>
 
       {/* Tombol Checkout dan Hapus Semua */}
@@ -32,7 +32,7 @@ const CartDropdown = () => {
             className="flex items-center justify-center gap-2 text-red-500 mt-2 text-sm"
           >
             <TbTrash />
-            Hapus Semua
+            Clear All
           </button>
         )}
       </div>

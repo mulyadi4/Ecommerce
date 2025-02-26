@@ -3,8 +3,8 @@
     {
       "id": 1,
       "title": "ASUS ROG ZEPHYRUS G16 GU603VI-I947C6G-O",
-      "image": "./img/asus-rog-zephyrus.png",
-      "price": 2499,
+      "image": "/img/asus-rog-zephyrus.png",
+      "price": 37485000,
       "description": "Gaming laptop dengan prosesor Intel Core i9 dan GPU NVIDIA RTX 4090",
       "brand": "ASUS",
       "model": "GU603VI-I947C6G-O",
@@ -19,8 +19,8 @@
     {
       "id": 2,
       "title": "Airpods Pro Original",
-      "image": "./img/airpods-pro.png",
-      "price": 249,
+      "image": "/img/airpods-pro.png",
+      "price": 3735000,
       "description": "Earphone wireless dengan Active Noise Cancellation dan kualitas suara spatial audio",
       "brand": "Apple",
       "model": "MME73AM/A",
@@ -35,8 +35,8 @@
     {
       "id": 3,
       "title": "Bose QuietComfort® 45 Headphones",
-      "image": "./img/bose-qc45.png",
-      "price": 329,
+      "image": "/img/bose-qc45.png",
+      "price": 4935000,
       "description": "Headphone noise-cancelling dengan kenyamanan 24 jam dan koneksi Bluetooth",
       "brand": "Bose",
       "model": "QC45",
@@ -51,8 +51,8 @@
     {
       "id": 4,
       "title": "Canon EOS R6",
-      "image": "./img/canon-eos-r6.png",
-      "price": 2499,
+      "image": "/img/canon-eos-r6.png",
+      "price": 37485000,
       "description": "Kamera mirrorless full-frame dengan sensor 20MP dan stabilisasi 8-stop",
       "brand": "Canon",
       "model": "EOS R6",
@@ -67,8 +67,8 @@
     {
       "id": 5,
       "title": "Audio Technica ATH-M50xBT2",
-      "image": "./img/audio-technica-m50x.png",
-      "price": 199,
+      "image": "/img/audio-technica-m50x.png",
+      "price": 2985000,
       "description": "Headphone wireless dengan akurasi suara studio dan baterai 50 jam",
       "brand": "Audio-Technica",
       "model": "ATH-M50xBT2",
@@ -83,8 +83,8 @@
     {
       "id": 6,
       "title": "Playstation 5",
-      "image": "./img/ps5.png",
-      "price": 499,
+      "image": "/img/ps5.png",
+      "price": 7485000,
       "description": "Konsol gaming generasi terbaru dengan SSD ultra-fast dan 4K 120Hz",
       "brand": "Sony",
       "model": "CFI-1215A",
@@ -99,8 +99,8 @@
     {
       "id": 7,
       "title": "Speaker Bluetooth JBL Flip 2",
-      "image": "./img/jbl-flip2.png",
-      "price": 89,
+      "image": "/img/jbl-flip2.png",
+      "price": 1335000,
       "description": "Speaker portabel waterproof dengan bass JBL Original Pro Sound",
       "brand": "JBL",
       "model": "Flip 2",
@@ -115,8 +115,8 @@
     {
       "id": 8,
       "title": "Apple Macbook Pro 2017",
-      "image": "./img/macbook-pro-2017.png",
-      "price": 999,
+      "image": "/img/macbook-pro-2017.png",
+      "price": 14985000,
       "description": "Laptop dengan prosesor Intel Core i5 dual-core dan Retina Display",
       "brand": "Apple",
       "model": "MacBookPro14,1",
@@ -131,8 +131,8 @@
     {
       "id": 9,
       "title": "SAMSUNG FREESTYLE PORTABLE PROJECTOR",
-      "image": "./img/samsung-freestyle.png",
-      "price": 799,
+      "image": "/img/samsung-freestyle.png",
+      "price": 11985000,
       "description": "Proyektor portable 360° dengan resolusi 1080p dan smart TV built-in",
       "brand": "Samsung",
       "model": "SP-LFF3CLA",
@@ -147,8 +147,8 @@
     {
       "id": 10,
       "title": "Samsung s23",
-      "image": "./img/samsung-s23.png",
-      "price": 799,
+      "image": "/img/samsung-s23.png",
+      "price": 11985000,
       "description": "Smartphone flagship dengan kamera 50MP, Snapdragon 8 Gen 2, dan layar 120Hz",
       "brand": "Samsung",
       "model": "SM-S911B",
@@ -163,8 +163,8 @@
     {
       "id": 11,
       "title": "Sony WF-1000XM5 Wireless Earphone",
-      "image": "./img/sony-wf1000xm5.png",
-      "price": 299,
+      "image": "/img/sony-wf1000xm5.png",
+      "price": 4485000,
       "description": "Earbuds dengan noise cancellation terbaik dan koneksi Bluetooth LE Audio",
       "brand": "Sony",
       "model": "WF-1000XM5",
@@ -179,8 +179,8 @@
     {
       "id": 12,
       "title": "Garmin Venu 2 GPS Wi-Fi",
-      "image": "./img/garmin-venu2.png",
-      "price": 399,
+      "image": "/img/garmin-venu2.png",
+      "price": 5985000,
       "description": "Smartwatch dengan layar AMOLED, pemantau kesehatan lengkap, dan GPS built-in",
       "brand": "Garmin",
       "model": "010-02541-11",
@@ -190,6 +190,150 @@
       "rating": {
         "rate": 4.5,
         "count": 321
+      }
+    },
+    {
+      "id": 13,
+      "title": "ACER ASPIRE A314",
+      "image": "/img/acer-aspire-a314.png",
+      "price": 9000000,
+      "description": "Laptop everyday dengan performa andal dan desain ringkas",
+      "brand": "Acer",
+      "model": "A314",
+      "category": "Laptop",
+      "popular": false,
+      "discount": 5,
+      "rating": {
+        "rate": 4.0,
+        "count": 80
+      }
+    },
+    {
+      "id": 14,
+      "title": "Acer Nitro 5 AN515",
+      "image": "/img/acer-nitro5-an515.png",
+      "price": 13485000,
+      "description": "Gaming laptop dengan performa tinggi dan sistem pendingin yang efisien",
+      "brand": "Acer",
+      "model": "AN515",
+      "category": "Laptop",
+      "popular": true,
+      "discount": 10,
+      "rating": {
+        "rate": 4.4,
+        "count": 150
+      }
+    },
+    {
+      "id": 15,
+      "title": "Acer Nitro ED270U_P2",
+      "image": "/img/acer-nitro-ed270u_p2.png",
+      "price": 4485000,
+      "description": "Monitor gaming dengan resolusi tinggi dan refresh rate cepat",
+      "brand": "Acer",
+      "model": "ED270U_P2",
+      "category": "Monitor",
+      "popular": false,
+      "discount": 15,
+      "rating": {
+        "rate": 4.1,
+        "count": 60
+      }
+    },
+    {
+      "id": 16,
+      "title": "Nitendo Switch Ver 2",
+      "image": "/img/nintendo-switch-ver2.png",
+      "price": 4485000,
+      "description": "Konsol gaming hybrid terbaru dengan peningkatan daya tahan baterai",
+      "brand": "Nintendo",
+      "model": "Switch Ver 2",
+      "category": "Console",
+      "popular": true,
+      "discount": 0,
+      "rating": {
+        "rate": 4.8,
+        "count": 200
+      }
+    },
+    {
+      "id": 17,
+      "title": "Xbox Series S",
+      "image": "/img/xbox-series-s.png",
+      "price": 4485000,
+      "description": "Konsol gaming generasi terbaru dengan performa tinggi dan dukungan resolusi 1440p",
+      "brand": "Microsoft",
+      "model": "Series S",
+      "category": "Console",
+      "popular": true,
+      "discount": 0,
+      "rating": {
+        "rate": 4.7,
+        "count": 500
+      }
+    },
+    {
+      "id": 18,
+      "title": "Asus TUF Gaming VG259Q3A",
+      "image": "/img/asus-tuf-gaming-vg259q3a.png",
+      "price": 4485000,
+      "description": "Monitor gaming dengan refresh rate tinggi dan respon cepat",
+      "brand": "Asus",
+      "model": "VG259Q3A",
+      "category": "Monitor",
+      "popular": true,
+      "discount": 10,
+      "rating": {
+        "rate": 4.3,
+        "count": 120
+      }
+    },
+    {
+      "id": 19,
+      "title": "Poco x7",
+      "image": "/img/poco-x7.png",
+      "price": 2985000,
+      "description": "Smartphone dengan performa tinggi dan harga terjangkau",
+      "brand": "Poco",
+      "model": "x7",
+      "category": "Smartphone",
+      "popular": true,
+      "discount": 5,
+      "rating": {
+        "rate": 4.0,
+        "count": 90
+      }
+    },
+    {
+      "id": 20,
+      "title": "Canon EOS R50",
+      "image": "/img/canon-eos-r50.png",
+      "price": 13485000,
+      "description": "Kamera mirrorless dengan sensor APS-C dan fitur canggih untuk fotografi profesional",
+      "brand": "Canon",
+      "model": "EOS R50",
+      "category": "Camera",
+      "popular": true,
+      "discount": 10,
+      "rating": {
+        "rate": 4.5,
+        "count": 70
+      }
+    },
+    {
+      "id": 21,
+      "title": "Iphone 13",
+      "image": "/img/iphone-13.png",
+      "price": 11985000,
+      "description": "Smartphone flagship dengan kamera ganda dan chip A15 Bionic",
+      "brand": "Apple",
+      "model": "13",
+      "category": "Smartphone",
+      "popular": true,
+      "discount": 0,
+      "rating": {
+        "rate": 4.6,
+        "count": 350
       }
     }
   ]

@@ -5,7 +5,7 @@ import banner2 from "../assets/banner-image2.png";
 import banner3 from "../assets/banner-image3.png";
 
 const Hero = () => {
-  // Konfigurasi slider dengan autoplay
+  
   const settings = {
     dots: true,
     infinite: true,
@@ -13,11 +13,11 @@ const Hero = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     swipe: true,
-    autoplay: true,         // Mengaktifkan autoplay
-    autoplaySpeed: 3000,    // Waktu delay antar slide (ms)
+    autoplay: true,         
+    autoplaySpeed: 3000,    
   };
 
-  // Data banner
+
   const banners = [
     {
       image: banner1,
@@ -40,12 +40,12 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative py-10 top-20">
+    <section className="relative py-10 top-20 px-4">
       <Slider {...settings} className="container mx-auto rounded-lg bg-gray-200">
         {banners.map((banner, index) => (
           <div key={index}>
             <div className="flex flex-col md:flex-row items-center">
-              {/* Container gambar dengan flex untuk memastikan image terpusat */}
+              
               <div className="md:w-1/2 flex justify-center items-center mb-4">
                 <img
                   src={banner.image}

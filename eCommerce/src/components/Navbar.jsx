@@ -1,12 +1,13 @@
 import React from 'react'
 
-const Navbar = ({stylesNavbar}) => {
+const Navbar = ({styleNavbar}) => {
   return (
-<nav className={`text-white ${stylesNavbar}`}>
-    <a href="">Home</a>
-    <a href="">Shop</a>
-    <a href="">About</a>
-    <a href="">Contact</a>
+<nav className={`text-white ${styleNavbar}`}>
+  
+    <a href="/">Home</a>
+    <a href="#category">Category</a>
+    <a href="#product">Product</a>
+    <a href="#contact">Contact</a>
 
 </nav>
       )
