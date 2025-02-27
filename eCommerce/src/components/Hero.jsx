@@ -50,7 +50,7 @@ const Hero = () => {
     },
     {
       image: banner2,
-      title: "Playsation 5",
+      title: "Playstation5",
       description:
         "Rasakan pengalaman gaming next-gen dengan grafis 4K memukau dan kecepatan SSD super cepat!.",
       link: "/product/6",
