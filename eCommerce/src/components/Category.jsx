@@ -27,7 +27,7 @@ const Category = ({ onSelectCategory }) => {
             <div
               key={index}
               onClick={() => onSelectCategory(cat.name)}
-              className="bg-white p-4 rounded shadow text-center cursor-pointer flex flex-col items-center justify-center"
+              className="bg-white p-4 rounded shadow text-center cursor-pointer flex flex-col items-center justify-center hover:shadow-lg transition-shadow"
             >
               <div className="text-3xl">
                 {cat.img}

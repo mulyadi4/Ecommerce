@@ -1,4 +1,4 @@
-// Home.jsx
+
 import React, { useState } from 'react';
 import Category from "../components/Category";
 import Hero from "../components/Hero";

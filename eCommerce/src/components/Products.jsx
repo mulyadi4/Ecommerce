@@ -22,7 +22,7 @@ const Products = ({ items }) => {
 
           return (
             
-            <div key={id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-lg transition-shadow">
+            <div key={id} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-2xl  transition-shadow ">
          
               
               <img 
@@ -91,7 +91,7 @@ const Products = ({ items }) => {
         })}
       </div>
       
-      {/* Tombol 'More' */}
+  
       {visibleProducts < sortedProducts.length && (
         <div className="text-center mt-8">
           <button
