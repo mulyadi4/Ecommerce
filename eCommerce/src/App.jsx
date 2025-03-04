@@ -8,13 +8,14 @@ import Login from './Pages/Login';
 function App() {
   return (
     <BrowserRouter>
-      <Header />
+     
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/product/:id" element={<ProductDetail />} />
        <Route path="/login" element={<Login />} />
        
       </Routes>
+      
     </BrowserRouter>
   );
 }

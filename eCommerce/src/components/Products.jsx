@@ -10,8 +10,14 @@ const Products = ({ items }) => {
     if (a.popular !== b.popular) return b.popular - a.popular
     return b.rating.rate - a.rating.rate
   })
-  
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
   return (
+    
     <div  className="p-4">
       <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {sortedProducts.slice(0, visibleProducts).map((items) => {
@@ -32,8 +38,8 @@ const Products = ({ items }) => {
                 
                 />
         <div className="group flex flex-row gap-2 text-white p-1 rounded-full ring-1 ring-white cursor-pointer">
-  <FaPlus onClick={() => addToCart(items)} className="bg-gray-600 text-white h-7 w-7 p-1.5 rounded-full cursor-pointer hover:bg-gray-500 transition-colors" />
-            <Link to={`/product/${id}`} >
+  <FaPlus onClick={() => addToCart(items) } className="bg-gray-600 text-white h-7 w-7 p-1.5 rounded-full cursor-pointer hover:bg-gray-500 transition-colors" />
+            <Link to={`/product/${id}`} onClick={scrollToTop}>
   <FaInfo className="hidden group-hover:flex duration-300 bg-gray-600 text-white h-7 w-7 p-1.5 rounded-full cursor-pointer hover:bg-gray-500 transition-colors" />
             </Link>
 

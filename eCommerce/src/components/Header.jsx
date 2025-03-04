@@ -4,6 +4,7 @@ import { MdClose, MdMenu, MdOutlineShoppingCart } from "react-icons/md";
 import CartDropdown from './CartDropdown';
 import { CartContext } from "../context/CartContext";
 import { Link } from 'react-router-dom';
+import { FaUser } from "react-icons/fa";
 const Header = () => {
   const [cartOpen, setCartOpen] = useState(false);
   const { itemQuantity } = useContext(CartContext);
@@ -37,7 +38,10 @@ const Header = () => {
                   {itemQuantity}
                 </span>
               )}
-            </button>
+            </button> 
+            <Link to="/login" className="text-white text-xl cursor-pointer hover:text-secondary">
+            <FaUser className='text-white'/>
+            </Link>
             <button
               aria-label="Toggle menu"
               onClick={toggleMenu}
@@ -65,6 +69,7 @@ const Header = () => {
           <CartDropdown />
         </div>
       )}
+  
     </header>
   );
 };

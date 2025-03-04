@@ -1,15 +1,19 @@
-import React, { useContext } from 'react';
+import React, { useContext,useState,useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
 import { FaArrowLeft, FaShoppingCart } from 'react-icons/fa';
 import data from '../assets/products.json';
 import Products from '../components/Products';
+import CartDropdown from '../components/CartDropdown';
+import { FaAngleUp } from "react-icons/fa";
 
+import {MdOutlineShoppingCart } from "react-icons/md";
 const ProductDetail = () => {
   const { id } = useParams();
   const { addToCart } = useContext(CartContext);
-  
-  // Cari produk berdasarkan id dari URL
+    const [cartOpen, setCartOpen] = useState(false);
+    const { itemQuantity } = useContext(CartContext);
+    const [showButton, setShowButton] = useState(false);
   const items = data.products.find(p => p.id === parseInt(id));
 
   if (!items) {
@@ -22,6 +26,25 @@ const ProductDetail = () => {
       </div>
     );
   }
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 250) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Lakukan destructuring setelah 'items' sudah ada
   const { image, category, title, description, brand, price, rating, discount } = items;
@@ -36,13 +59,33 @@ const ProductDetail = () => {
   );
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div id='#' className="container mx-auto px-4 py-8">
+    
+      <div className='flex justify-between items-center '> 
       <Link 
         to="/" 
-        className="flex items-center gap-2 mb-6 text-gray-600 hover:text-gray-800 w-fit"
+        className="flex relative items-center gap-2 mb-6 top-2 text-gray-600 hover:text-gray-800 w-fit"
       >
         <FaArrowLeft className="inline-block" /> Back to Shop
       </Link>
+      <button
+              aria-label="Toggle cart"
+              onClick={() => setCartOpen(prev => !prev)}
+              className="relative flex items-center justify-center focus:outline-none"
+            >
+              <MdOutlineShoppingCart className="text-black text-[1.5rem]" />
+              {itemQuantity > 0 && (
+                <span className="absolute -top-2.5 -right-2.5 flex items-center justify-center w-5 h-5 rounded-full bg-gray-500 text-white text-sm shadow-md">
+                  {itemQuantity}
+                </span>
+              )}
+            </button>
+      </div>
+      {cartOpen && (
+        <div className="absolute right-1 top-5 z-20">
+          <CartDropdown />
+        </div>
+      )}
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Product Image */}
@@ -118,6 +161,14 @@ const ProductDetail = () => {
         </h2>
         <Products items={relatedProducts} />
       </div>
+            {showButton && (
+              <div
+                onClick={scrollToTop}
+                className="fixed bottom-5 right-5 bg-gray-700 p-3 rounded-full cursor-pointer hover:bg-gray-500"
+              >
+                <FaAngleUp className="text-white" size={24} />
+              </div>
+            )}
     </div>
   );
 };
